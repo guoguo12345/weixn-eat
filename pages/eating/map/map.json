@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#F26166",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "~选择收货地址~",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": "false"
+}

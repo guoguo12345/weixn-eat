@@ -1,0 +1,21 @@
+/* pages/eating/order/order.wxss */
+.willLogin {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	padding-top: 45%;
+}
+.willLogin image {
+	width: 50%;
+}
+.willLogin view {
+	font-size: 32rpx;
+	color: #111;
+	padding: 40rpx;
+}
+.willLogin button {
+	background: #F26166;
+}

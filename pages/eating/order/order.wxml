@@ -1,0 +1,8 @@
+<view class="willLogin">
+	<image mode="widthFix" src="../../../images/my_light2.png"></image>
+	<view>{{loginToast}}</view>
+	<navigator url="">
+		<button size="mini" catchtap="showToast">登录</button>
+	</navigator>
+	
+</view>

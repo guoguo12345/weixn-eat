@@ -1,0 +1,43 @@
+/* pages/eating/map/map.wxss */
+.map {
+    width: 100%;
+}
+.map-search {
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20rpx;
+}
+.map-search .search {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EFEFEF;
+    border-radius: 10px;
+}
+.map-search .search image {
+    width: 30rpx;
+    margin: 0 9rpx;
+}
+.map-search .search input {
+    flex: 1;
+    font-size: 12px;
+}
+.map-search button {
+    width: 90rpx;
+    background: rgba(0,0,0,.4);
+    color: #fff;
+    padding: 6rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    margin-right: 30rpx;
+    font-size: 12px;
+}
+.positionMap {
+    background: #fff;
+    font-size: 12px;
+    padding: 20rpx;
+}

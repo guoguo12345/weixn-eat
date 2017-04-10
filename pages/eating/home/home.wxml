@@ -1,0 +1,40 @@
+<view class="main-controller">
+	<scroll-view  scroll-y="true">
+		<view class="main-nav">
+			<navigator url="../map/map" class="location">立人科技</navigator>
+			<view class="search">
+				<image src="../../../images/search.png" />
+				<input type="text" placeholder="烤鸭" />
+			</view>
+		</view>
+		<view class="goods">
+			<view class="title">附近商家</view>
+			<ul class="nav">
+				<li>
+				  	<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+					    <view class="picker">
+					      {{array[index]}}
+					      <image src="../../../images/arrow_down.png"></image>
+					    </view>
+				  	</picker>
+				</li>
+				<li>|	销量最高	</li>
+				<li>|	距离最近	</li>
+				<li>|   筛选	</li>
+			</ul>
+			<view class="list">
+				<navigator url="../detail/detail?title={{item.title}}" class="dlview" wx:for="{{list}}" wx:key="item.id">
+					<view class="dtview">
+						<image mode="widthFix" src="{{item.img}}"></image>
+					</view>
+					<view class="ddview">
+						<view>{{item.title}}<b>2.6km</b></view>
+						<view><i>月售120单</i><b>30分钟</b></view>
+						<view><i>起送20</i><b>美团专送</b></view>
+						<view>该商家支持在线支付</view>
+					</view>			
+				</navigator>			
+			</view>
+		</view>
+	</scroll-view>
+</view>

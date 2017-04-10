@@ -1,0 +1,11 @@
+<view class="map">
+    <view class="map-search">
+        <view class="search">
+            <image mode="widthFix" src="../../../images/search.png" />
+            <input type="text" placeholder="请输入收获地址" />
+        </view>
+        <button>搜索</button>
+    </view>
+    <button catchtap="getLocation" class="positionMap">点击定位当前位置</button>
+   
+</view>

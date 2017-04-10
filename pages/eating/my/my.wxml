@@ -1,0 +1,16 @@
+<view class="my">
+	<view class="my-top">
+		<image animation="{{animationData}}" mode="widthFix" src="../../../images/my2.png"></image>
+		<navigator url="">
+			<button size="mini" plain="true">登录</button>
+		</navigator>
+	</view>
+	<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+	    <view class="picker">
+	      {{array[index]}}
+	    </view>
+	</picker>
+	<view >
+	</view>
+
+</view>

@@ -1,0 +1,89 @@
+<view class="detail">
+	<button catchtap="showNotice">满60减6,满80减9</button>
+	<view class="noticeMc" hidden="{{isshowNotice}}">
+		<view class="notice">
+			<view>---小六汤包---</view>
+			<view>起送￥<b>20 | </b>起送<b>￥20 | </b></view>
+			<view>---优惠信息---</view>
+			<view>满60减6,满80减9</view>
+			<view>---商家公告---</view>
+			<view>小六汤包小六汤包小六六汤包小六汤包小六六汤包小六汤包小六汤包小六汤包小六汤包</view>
+		</view>
+		<view class="close" catchtap="hideNotice">X</view>
+	</view>
+	<nav class="main-nav">
+        <ul>
+            <li class="{{current == 0?'active':''}}" data-index="0" catchtap="touchSlide">点菜</li>
+            <li class="{{current == 1?'active':''}}" data-index="1" catchtap="touchSlide">评价</li>
+            <li class="{{current == 2?'active':''}}" data-index="2" catchtap="touchSlide">商家</li>
+        </ul>
+  	</nav>
+  	<swiper class="main-swiper" bindchange="changeSlide" current="{{current}}">
+  		<scroll-view scroll-y="true">
+  			<swiper-item>
+  				<view class="main-top">
+  					<view class="swiper-left">
+					 	<ul>
+						 	<li catchtap="changeHot">热销</li>
+						 	<li catchtap="changeSpring">春季新品</li>
+						 	<li catchtap="changeSummer">夏季新品</li>
+						 	<li catchtap="changeHot">小六特色菜</li>
+						 	<li catchtap="changeSpring">热销</li>
+						 	<li catchtap="changeSummer">春季新品</li>
+						 	<li catchtap="changeHot">夏季新品</li>
+						 	<li catchtap="changeSpring">小六特色菜</li>
+						 	<li catchtap="changeSummer">热销</li>
+						 	<li catchtap="changeHot">春季新品</li>
+						 	<li catchtap="changeSpring">夏季新品</li>
+						 	<li catchtap="changeSummer">小六特色菜</li>
+						 	<li catchtap="changeHot">热销</li>
+						 	<li catchtap="changeSpring">春季新品</li>
+						 	<li catchtap="changeSummer">夏季新品</li>
+						 	<li catchtap="changeHot">小六特色菜</li>
+						 	<li catchtap="changeSpring">小六特色菜</li>
+						 	<li catchtap="changeSummer">热销</li>
+						 	<li catchtap="changeHot">春季新品</li>
+						 	<li catchtap="changeSpring">夏季新品</li>
+						 	<li catchtap="changeSummer">小六特色菜</li>
+						 	<li catchtap="changeHot">热销</li>
+						 	<li catchtap="changeSpring">春季新品</li>
+						 	<li catchtap="changeSummer">夏季新品</li>
+						 	<li catchtap="changeHot">小六特色菜</li>
+						</ul>
+				 	</view>
+				 	<view class="swiper-right">	
+				 		<dl wx:for="{{list}}" wx:key="{{index}}">
+				 			<dt>
+				 				<image mode="widthFix" src="{{item.img}}"></image>
+				 			</dt>
+				 			<dd>
+				 				<span>{{item.title}}</span>
+				 				<span>月售{{item.monthSale}} <b>赞{{item.good}}</b></span>
+				 				<span>￥{{item.price}}
+				 					<i data-ord="{{index}}" class="{{counts[index] == 0?'none':''}}" catchtap="desCount">-</i>
+				 					<i class="{{counts[index] == 0?'none':''}}">{{counts[index]}}</i>
+				 					<b data-ord="{{index}}" class="ins" catchtap="insCount">+</b>
+				 				</span>
+				 			</dd>
+				 		</dl>	
+				 	</view>				
+  				</view>
+				<view class="footer">
+					<b>
+						<image mode="widthFix" src="../../../images/my_light2.png"></image>另需配送费￥4 
+						<i class="{{allCounts == 0?'none':''}}">￥{{allPrice}}</i>
+					</b>
+					<button class="{{allCounts == 0?'':'none'}}">20元起送</button>
+					<button class="{{allCounts == 0||allPrice >= 20?'none':''}}">还差{{20-allPrice}}元</button>
+					<button class="{{allPrice<20?'none':''}}">去结算</button>
+				</view>
+		    </swiper-item>
+		     <swiper-item>
+		     	评价
+		    </swiper-item>
+		     <swiper-item>
+		    	 商家
+		    </swiper-item>	
+  		</scroll-view>
+	</swiper>
+</view>
